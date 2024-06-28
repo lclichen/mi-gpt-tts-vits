@@ -1,5 +1,6 @@
 import { Readable } from "stream";
 import { kVolcanoTTS } from "./volcano";
+import { kGPTSoVITS } from "./gptsovits";
 import {
   CurrentTTSSpeaker,
   TTSProvider,
@@ -11,6 +12,7 @@ import {
  * 此处注册 TTS 服务提供商
  */
 export const kTTSProviders: TTSProvider[] = [
+  kGPTSoVITS, // 自建 TTS 服务
   kVolcanoTTS, // 火山引擎，官方文档地址：https://www.volcengine.com/docs/6561/79817
 ];
 
